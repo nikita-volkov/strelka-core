@@ -10,7 +10,7 @@ data Response =
   Response !Status ![Header] !OutputStream
 
 -- |
--- HTTP Method in lower-case.
+-- HTTP Method __in lower-case__.
 newtype Method =
   Method ByteString
   deriving (IsString, Show, Eq, Ord, Hashable)
@@ -31,7 +31,7 @@ data Header =
   Header !HeaderName !HeaderValue
 
 -- |
--- Header name in lower-case.
+-- Header name __in lower-case__.
 newtype HeaderName =
   HeaderName ByteString
   deriving (IsString, Show, Eq, Ord, Hashable)

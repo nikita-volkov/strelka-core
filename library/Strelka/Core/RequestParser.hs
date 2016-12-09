@@ -6,7 +6,7 @@ import Strelka.Core.Model
 
 {-|
 Parser of an HTTP request.
-Consumes path segments, analyzes 
+Analyzes its meta information, consumes the path segments and the body.
 -}
 newtype RequestParser m a =
   RequestParser (ReaderT Request (StateT [PathSegment] (ExceptT Text m)) a)
