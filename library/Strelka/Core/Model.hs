@@ -20,11 +20,11 @@ newtype PathSegment =
   deriving (IsString, Show, Eq, Ord, Hashable)
 
 newtype ParamName =
-  ParamName ByteString
+  ParamName Text
   deriving (IsString, Show, Eq, Ord, Hashable)
 
 newtype ParamValue =
-  ParamValue (Maybe ByteString)
+  ParamValue [Text]
   deriving (Show, Eq, Ord, Hashable)
 
 data Header =
@@ -50,6 +50,6 @@ newtype InputStream =
   InputStream (IO ByteString)
 
 -- |
--- A function on a chunk consuming and flushing IO actions.
+-- A function on chunk-consuming and flushing IO actions.
 newtype OutputStream =
   OutputStream ((ByteString -> IO ()) -> IO () -> IO ())
