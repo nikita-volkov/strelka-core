@@ -4,7 +4,7 @@ import Strelka.Core.Prelude
 
 
 data Request =
-  Request !Method ![PathSegment] !(HashMap ParamName ParamValue) !(HashMap HeaderName HeaderValue) !InputStream
+  Request !Method ![PathSegment] !Query !(HashMap HeaderName HeaderValue) !InputStream
 
 data Response =
   Response !Status ![Header] !OutputStream
@@ -19,13 +19,9 @@ newtype PathSegment =
   PathSegment Text
   deriving (IsString, Show, Eq, Ord, Hashable)
 
-newtype ParamName =
-  ParamName Text
+newtype Query =
+  Query ByteString
   deriving (IsString, Show, Eq, Ord, Hashable)
-
-newtype ParamValue =
-  ParamValue [Text]
-  deriving (Show, Eq, Ord, Hashable)
 
 data Header =
   Header !HeaderName !HeaderValue
