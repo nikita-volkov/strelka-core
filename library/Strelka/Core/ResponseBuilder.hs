@@ -16,7 +16,8 @@ instance Monoid ResponseBuilder where
   mappend (ResponseBuilder fn1) (ResponseBuilder fn2) =
     ResponseBuilder (fn2 . fn1)
 
-instance Semigroup ResponseBuilder
+instance Semigroup ResponseBuilder where
+  (<>) = mappend
 
 
 {-|
