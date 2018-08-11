@@ -1,7 +1,7 @@
 name:
   strelka-core
 version:
-  0.3
+  0.3.0.1
 synopsis:
   Core components of "strelka"
 description:
