@@ -24,6 +24,9 @@ instance MonadTrans RequestParser where
   lift m =
     RequestParser (lift (lift (lift m)))
 
+instance MFunctor RequestParser where
+  hoist f (RequestParser a) = RequestParser (hoist (hoist (hoist f)) a)
+
 {-|
 Execute the parser providing a request and a list of segments.
 -}

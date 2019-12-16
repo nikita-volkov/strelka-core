@@ -110,6 +110,10 @@ import Data.Text as Exports (Text)
 -------------------------
 import Data.Hashable as Exports
 
+-- mmorph
+-------------------------
+import Control.Monad.Morph as Exports
+
 -- Utils
 -------------------------
 import qualified Data.ByteString as ByteString

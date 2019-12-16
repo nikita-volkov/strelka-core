@@ -36,6 +36,7 @@ library
     base >=4.9 && <5,
     bytestring >=0.10 && <0.11,
     hashable ==1.*,
+    mmorph >=1.1 && <2,
     mtl ==2.*,
     text >=1 && <2,
     transformers >=0.4 && <0.6,
