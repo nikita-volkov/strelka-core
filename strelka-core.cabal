@@ -1,5 +1,5 @@
 name: strelka-core
-version: 0.3.0.1
+version: 0.3.1
 synopsis: Core components of "strelka"
 description:
   This library is only intended for the internal usage
